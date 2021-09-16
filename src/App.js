@@ -17,8 +17,8 @@ const {Content} = Layout;
 const App = () => {
     return (
         <div className={styles.App}>
-            <Header />
-            <Content className={styles.content}>
+            {/* <Header /> */}
+            <Content>
                 <Router>
                     <Switch>
                         {/* <Route path="/love-yin-bao/main/">
