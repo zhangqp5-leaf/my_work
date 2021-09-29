@@ -21,12 +21,6 @@ const App = () => {
             <Content>
                 <Router>
                     <Switch>
-                        {/* <Route path="/love-yin-bao/main/">
-                            <Main />
-                        </Route>
-                        <Route path="/love-yin-bao/treehole/">
-                            <TreeHole />
-                        </Route> */}
                         <Route path="/">
                             <Main />
                         </Route>
