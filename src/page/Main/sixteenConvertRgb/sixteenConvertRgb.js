@@ -12,6 +12,7 @@ const SixteenConvertRgb = props => {
 
     const changeSixteenParam = e => {
         setSixteenParam(e.target.value);
+        setRgbResult('');
     };
     const handleSixteenConvert = () => {
         let _rgbResult = JSON.parse(JSON.stringify(rgbResult));
@@ -57,8 +58,13 @@ const SixteenConvertRgb = props => {
                         placeholder="请输入，例：#FFFF00"
                     />
                 </Col>
-                <Col span={10}>
+                <Col span={7}>
                     <Button type='primary' onClick={handleSixteenConvert}>转换</Button>
+                </Col>
+                <Col span={3}>
+                    {
+                        rgbResult ? <section style={{background: sixteenParam, width: '100%', height: '100%'}}></section> : ''
+                    }
                 </Col>
             </Row>
             <Row style={{marginTop: '16px'}}>

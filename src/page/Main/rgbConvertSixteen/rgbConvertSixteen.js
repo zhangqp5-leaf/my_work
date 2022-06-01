@@ -13,6 +13,7 @@ const RgbConvertSixteen = props => {
     // 输入框
     const changeRgbParam = e => {
         setRgbParam(e.target.value);
+        setSixResult('');
     }
     // 转换事件
     const handleRgbConvert = () => {
@@ -66,8 +67,13 @@ const RgbConvertSixteen = props => {
                         placeholder="请输入，例：255,234,32"
                     />
                 </Col>
-                <Col span={10}>
+                <Col span={7}>
                     <Button type='primary' onClick={handleRgbConvert}>转换</Button>
+                </Col>
+                <Col span={3}>
+                    {
+                      sixResult ? <section style={{background: sixResult, width: '100%', height: '100%'}}></section> : ''
+                    }
                 </Col>
             </Row>
             <Row style={{marginTop: '16px'}}>
